@@ -1,0 +1,10 @@
+<script>start("c:\\Users\\Casa do Computador\\Documents\\setup\\dashboard\\public\\");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("css","css",1,0,"0 B",1743463610,"31/03/2025, 20:26:50");</script>
+<script>addRow("images","images",1,0,"0 B",1743463605,"31/03/2025, 20:26:45");</script>
+<script>addRow("js","js",1,0,"0 B",1743467258,"31/03/2025, 21:27:38");</script>
+<script>addRow("404.html","404.html",0,1518,"1.5 kB",1743463945,"31/03/2025, 20:32:25");</script>
+<script>addRow("admin.html","admin.html",0,6608,"6.5 kB",1743468851,"31/03/2025, 21:54:11");</script>
+<script>addRow("index.html","index.html",0,1593,"1.6 kB",1743468819,"31/03/2025, 21:53:39");</script>
+<script>addRow("login.html","login.html",0,3986,"3.9 kB",1743468849,"31/03/2025, 21:54:09");</script>
+<script>addRow("register.html","register.html",0,1807,"1.8 kB",1743467252,"31/03/2025, 21:27:32");</script>
