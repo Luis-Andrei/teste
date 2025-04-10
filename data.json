@@ -1,0 +1,15 @@
+{
+  "site": {
+    "name": "Luis Andrei",
+    "description": "Cursando front-end e Back-end com Python e JavaScript",
+    "year": 2025,
+    "author": "Luis Andrei"
+  },
+  "social": {
+    "instagram": "https://instagram.com/luis_andrei_552",
+    "twitter": "https://twitter.com/luisand36562626",
+    "linkedin": "https://www.linkedin.com/in/luis-andrei-258b54212",
+    "github": "https://github.com/Luis-Andrei",
+    "portfolio": "http://127.0.0.1:5500/index.html"
+  }
+} 

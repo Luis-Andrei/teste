@@ -1,0 +1,19 @@
+{
+  "social": {
+    "instagram": "https://instagram.com/luis_andrei_552",
+    "twitter": "https://twitter.com/luisand36562626",
+    "linkedin": "https://www.linkedin.com/in/luis-andrei-258b54212",
+    "github": "https://github.com/Luis-Andrei"
+  },
+  "pages": {
+    "home": "/",
+    "portfolio": "/portfolio",
+    "projects": "/portfolio"
+  },
+  "site": {
+    "name": "Luis Andrei - Links",
+    "description": "Back-end / Front-end e mais...",
+    "author": "Luis Andrei dos Santos",
+    "year": "2025"
+  }
+} 

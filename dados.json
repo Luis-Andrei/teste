@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "Luis Andrei - Links",
+    "name": "Luis Andrei",
+    "description": "Front-end e Back-end com Python e JavaScript"
+  },
+  "links": [
+    {
+      "url": "https://instagram.com/luis_andrei_552",
+      "icon": "fab fa-instagram",
+      "name": "Instagram",
+      "description": "Siga-me no Instagram",
+      "class": "instagram"
+    },
+    {
+      "url": "https://twitter.com/luisand36562626",
+      "icon": "fab fa-twitter",
+      "name": "Twitter",
+      "description": "Acompanhe meus tweets",
+      "class": "twitter"
+    },
+    {
+      "url": "https://www.linkedin.com/in/luis-andrei-258b54212",
+      "icon": "fab fa-linkedin",
+      "name": "LinkedIn",
+      "description": "Conecte-se profissionalmente",
+      "class": "linkedin"
+    },
+    {
+      "url": "https://github.com/Luis-Andrei",
+      "icon": "fab fa-github",
+      "name": "GitHub",
+      "description": "Veja meus projetos no GitHub",
+      "class": "github"
+    },
+    {
+      "url": "http://127.0.0.1:5500/index.html",
+      "icon": "fas fa-briefcase",
+      "name": "Portfólio 1",
+      "description": null, 
+      "class": "portfolio"
+    }
+  ],
+  "footer": {
+      "text": "© 2025 Luis Andrei - Todos os direitos reservados"
+  }
+} 

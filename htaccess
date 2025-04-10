@@ -1,0 +1,29 @@
+# Impedir listagem de diretórios (evita que usuários vejam arquivos)
+Options -Indexes
+
+# Negar acesso ao diretório .git
+<DirectoryMatch "^\.git">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
+
+<FilesMatch "^\.git">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Bloquear bots maliciosos
+SetEnvIfNoCase User-Agent "MJ12bot" bad_bot
+SetEnvIfNoCase User-Agent "AhrefsBot" bad_bot
+SetEnvIfNoCase User-Agent "BLEXBot" bad_bot
+SetEnvIfNoCase User-Agent "DotBot" bad_bot
+
+Order Allow,Deny
+Allow from all
+Deny from env=bad_bot
+
+# Bloquear acesso direto à pasta /images/
+<Directory "/caminho/para/seu/site/images">
+    Order allow,deny
+    Deny from all
+</Directory>

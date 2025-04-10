@@ -1,0 +1,76 @@
+# robots.txt - Segurança avançada
+
+# Sitemap (caso você tenha)
+Sitemap: https://seusite.com/sitemap.xml
+
+# Permitir acesso geral apenas à raiz e páginas públicas
+User-agent: *
+Allow: /
+
+# Bloquear diretórios sensíveis e administrativos
+Disallow: /admin/
+Disallow: /painel/
+Disallow: /dashboard/
+Disallow: /config/
+Disallow: /private/
+Disallow: /storage/
+Disallow: /database/
+Disallow: /.git/
+Disallow: /logs/
+Disallow: /temp/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /tests/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Bloquear arquivos sensíveis por extensão
+Disallow: /*.env$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.zip$
+Disallow: /*.tar$
+Disallow: /*.gz$
+Disallow: /*.json$
+Disallow: /*.lock$
+Disallow: /*.md$
+
+# Bloquear arquivos específicos
+Disallow: /composer.json
+Disallow: /package.json
+Disallow: /webpack.config.js
+
+# Impedir indexação de parâmetros comuns (evita conteúdo duplicado)
+Disallow: /*?*
+Disallow: /*&*
+
+# Bloquear bots abusivos conhecidos
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+# Permitir o Googlebot acessar tudo, exceto áreas protegidas
+User-agent: Googlebot
+Disallow: /admin/
+Disallow: /private/
