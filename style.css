@@ -1,297 +1,134 @@
-/* Reset e estilos base */
 :root {
-    --primary-color: #fff;
-    --secondary-color: #1e1e2f;
-    --accent-color: #0f0;
-    --text-color: #fff;
-    --link-hover: #0f0;
-    --card-bg: rgba(30, 30, 47, 0.8);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --font-primary: 'Poppins', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --green-neon: #44ff44;
+    --green-neon-light: #66ff66;
+    --bg-dark: #000;
+    --bg-body: #111;
+    --font-main: 'Arial', sans-serif;
 }
 
 body {
-    font-family: var(--font-primary);
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-body);
+    font-family: var(--font-main);
+    color: var(--green-neon);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    min-height: 100vh;
 }
 
-/* Container principal */
-.container {
-    width: 100%;
-    max-width: clamp(320px, 90vw, 420px);
-    margin: 0 auto;
-    padding: 2rem;
-    background: var(--card-bg);
-    border-radius: 1rem;
-    box-shadow: var(--card-shadow);
-    border: 1px solid var(--card-border);
-}
-
-/* Estilos do cabeçalho */
-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    border: 1px solid var(--terminal-border);
-    border-radius: 8px;
-    box-shadow: 0 0 20px var(--terminal-shadow);
-}
-
-.profile {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.profile h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-color);
-}
-
-.profile p {
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-/* Container de links */
-.links {
+.game-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1400px;
+    background-color: var(--bg-dark);
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(68, 255, 68, 0.1);
 }
 
-/* Estilos dos cards de link */
-.link-card {
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 2px solid var(--green-neon);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(68, 255, 68, 0.3);
+}
+
+.score-container {
+    display: flex;
+    gap: 30px;
+    font-size: clamp(1.2em, 1.5vw, 1.8em);
+    text-shadow: 0 0 6px rgba(68, 255, 68, 0.5);
+}
+
+.score, .high-score {
     display: flex;
     align-items: center;
-    padding: 1rem;
-    background: var(--card-bg);
-    border-radius: 0.5rem;
-    text-decoration: none;
-    color: var(--text-color);
-    transition: transform 0.3s ease;
-    border: 1px solid var(--card-border);
+    gap: 10px;
 }
 
-.link-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--accent-color);
-    box-shadow: 0 0 20px var(--accent-color);
+.controls {
+    display: flex;
+    gap: 15px;
 }
 
-.link-card i {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: var(--accent-color);
+.game-area {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-.link-card span {
-    font-weight: 600;
-    margin-bottom: 0.25rem;
+#gameCanvas {
+    background-color: var(--bg-dark);
+    border: 2px solid var(--green-neon);
+    border-radius: 12px;
+    width: 1200px;
+    height: 800px;
+    box-shadow: 0 0 30px rgba(68, 255, 68, 0.2), 0 0 60px rgba(68, 255, 68, 0.1) inset;
 }
 
-.link-card p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Estilos do rodapé */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--card-border);
-}
-
-footer p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* Botão de alternar tema */
-#theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
-    border: 1px solid var(--terminal-border);
-    color: var(--terminal-text);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+button {
+    padding: 10px 20px;
+    background-color: #44ff44;
+    color: #000;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
     transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(68, 255, 68, 0.3);
 }
 
-#theme-toggle:hover {
-    background: var(--terminal-hover);
-    color: var(--terminal-hover-text);
+button:hover {
+    background-color: #66ff66;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(68, 255, 68, 0.5);
 }
 
-/* Efeito de sobreposição do fundo */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.3) 100%
-    );
-    pointer-events: none;
-    z-index: -1;
+button.active {
+    background-color: #ff4444;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.3);
 }
 
-/* Estilos do canvas */
-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+button.active:hover {
+    background-color: #ff6666;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
 }
 
-/* Notificação de atualização */
-.update-notification {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: var(--terminal-bg);
-    border: 1px solid var(--terminal-border);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 20px var(--terminal-shadow);
-    z-index: 1000;
-    animation: slideIn 0.3s ease;
-    color: var(--terminal-text);
+/* Scrollbar Styling */
+#scoreList {
+    scrollbar-width: thin;
+    scrollbar-color: var(--green-neon) rgba(0, 0, 0, 0.3);
 }
 
-.update-notification.fade-out {
-    animation: fadeOut 0.5s ease forwards;
+#scoreList::-webkit-scrollbar {
+    width: 6px;
 }
 
-/* Tags de código flutuantes */
-.code-float {
-    position: fixed;
-    font-size: 14px;
-    color: rgba(0, 255, 0, 0.3);
-    font-family: 'Courier New', monospace;
-    pointer-events: none;
-    animation: float-code 12s linear infinite;
-    z-index: -1;
-    -webkit-user-select: none;
-    user-select: none;
+#scoreList::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
 }
 
-/* Animações */
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+#scoreList::-webkit-scrollbar-thumb {
+    background: var(--green-neon);
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(68, 255, 68, 0.5);
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+#scoreList::-webkit-scrollbar-thumb:hover {
+    background: var(--green-neon-light);
 }
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes float-code {
-    0% {
-        transform: translateY(100vh) translateX(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.3;
-    }
-    90% {
-        opacity: 0.3;
-    }
-    100% {
-        transform: translateY(-100px) translateX(100px);
-        opacity: 0;
-    }
-}
-
-@keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-2px, 2px);
-    }
-    40% {
-        transform: translate(-2px, -2px);
-    }
-    60% {
-        transform: translate(2px, 2px);
-    }
-    80% {
-        transform: translate(2px, -2px);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-    
-    .profile h1 {
-        font-size: 1.5rem;
-    }
-    
-    .link-card {
-        padding: 0.75rem;
-    }
-}
-
-/* Acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-} 
